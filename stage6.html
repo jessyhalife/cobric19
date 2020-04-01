@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+      <link rel="stylesheet" href="./assets/style.css"></link>
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body class="bg-black">
+    <a href="stage5.html" class="btn btn-dark" style="color: white; margin-top: 30px; margin-left: 30px">VOLVER</a>
+    <div class="container" style="text-align: center">
+        <span class="blur">BUSCA M1 GAT0 FAV0R1T0</span>
+        <img src="./assets/img/mi-gato-favorito.jpg" />
+    </div>
+    <hr>
+    <div class="container" style="text-align: center; margin-top: 100px; margin-bottom: 50px">
+        <input type="text" id="codeZip" placeholder="codigo">
+        <button onClick="checkCode();"class="btn btn-danger">OK</button>
+    </div>
+  </body>
+  <script>
+      function checkCode(){
+          var codigo = $("#codeZip").val();
+          if (codigo == 962)
+            location.href="stage7.html";
+      }
+  </script>
+</html>

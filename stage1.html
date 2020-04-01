@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+      <link rel="stylesheet" href="./assets/style.css"></link>
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body class="bg-black">
+    <a href="index.html" class="btn btn-dark" style="color: white; margin-top: 30px; margin-left: 30px">VOLVER</a>
+    <div class="container" style="text-align: center">
+        <img src="./assets/img/Carta.png" style="width: 70%; height: 70%" alt="Carta"></img>
+        
+        <h5 style="color: white">Contacta con el abogado de Jones Dimka y él te dará los pasos a seguir.</h5>
+        <h6 style="color: #cce">NOTA: si el email empieza por «n», NO es correcto</h6>
+    </div>
+    <hr>
+    <div class="container" style="text-align: center; margin-top: 20px; margin-bottom: 50px">
+        <h3 style="color: #ccc">Si lograste contactarte, ingresá el código que te dieron para poder continuar</h3>
+        <input type="text" id="codeZip" placeholder="código">
+        <button onClick="checkCode();"class="btn btn-danger">OK</button>
+    </div>
+  </body>
+  <script>
+      function checkCode(){
+          var codigo = $("#codeZip").val();
+          if (codigo == "G37TH47Z1P")
+            {
+                location.href="stage2.html";
+            window.open("https://drive.google.com/file/d/1TW994PSKJ_iP5cFTexbGRvnXOSiWyNYr/view?usp=sharing", "_newtab");
+            }
+      }
+  </script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+      <link rel="stylesheet" href="./assets/style.css"></link>
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body >
+    <a href="stage4.html" class="btn btn-dark" style="color: white; margin-top: 30px; margin-left: 30px">VOLVER</a>
+    <div class="container" style="text-align: center">
+        <div class="blockquote">
+           Me encanta la música, adoro todos los estilos. <br>
+           Cuando me pongo a trabajar siempre tengo un orden muy concreto porque me ayuda a concentrarme.<br>
+           El día siempre lo empiezo con Mozart, ayuda a estimular la mente y es muy relajante. Además, la Flauta Mágica es una de mis óperas favoritas.<br>
+           Después, para darle un poco de energía al día, siempre busco algo cañero antes de comer.<br>
+           Mientras almuerzo suelo escuchar algo tranquilo, un poco de violín siempre acaba relajando mi mente.<br>
+           Si necesito instrospección, no hay nada como un buen solo de trompeta para conseguir ese punto de inspiración que todos necesitamos.<br>
+           Y para acabar, siempre he sido un romántico. Una de mis películas favoritas es Titanic. Ay, cada vez que la escucho lloro de la emoción.
+    
+        </div>
+    </div>
+    <hr>
+    <div class="container" style="text-align: center; margin-top: 100px; margin-bottom: 50px">
+        <input type="text" id="codeZip" placeholder="codigo">
+        <button onClick="checkCode();"class="btn btn-danger">OK</button>
+    </div>
+  </body>
+  <script>
+      function checkCode(){
+          var codigo = $("#codeZip").val();
+          if (codigo == 15170056291823)
+            location.href="stage6.html";
+      }
+  </script>
+</html>

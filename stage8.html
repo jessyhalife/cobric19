@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+      <link rel="stylesheet" href="./assets/style.css"></link>
+     
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body class="wrapper">
+    <a href="stage5.html" class="btn btn-dark" style="color: white; margin-top: 30px; margin-left: 30px">VOLVER</a>
+    <div class="container" style="text-align: center;" >
+      <div class="jumbotron">
+        <span>
+        
+        <h2>¡Enhorabuena, has llegado al final!</h2>
+ 
+        <h3>Genial, has llegado al final de este pequeño juego que hemos desarrollado para intentar paliar el aburrimiento que tiene estar en casa encerrados sin poder escapar. Si has llegado hasta aquí significa que has dado lo mejor de ti para resolver este divertido juego. ¡Felicidades!
+        <br>
+        Lamentablemente Jones Dimka era un estafador, ¿de verdad no sospechaste que sería un poco raro que tuvieses un familiar africano multimillonario? 
+        <br>
+        Esta es toda la fortuna que te encontraste en su gran caja fuerte:</h3>
+        <br>
+        </span>
+        <button onClick="location.href='final.html'" class="btn btn-warning">VER MI FORTUNA</button>
+    </div>
+    </div>
+    
+  </body>
+  <script>
+      for (var i = 0; i < 250; i++) {
+  create(i);
+}
+
+function create(i) {
+  var width = Math.random() * 8;
+  var height = width * 0.4;
+  var colourIdx = Math.ceil(Math.random() * 3);
+  var colour = "red";
+  switch(colourIdx) {
+    case 1:
+      colour = "yellow";
+      break;
+    case 2:
+      colour = "blue";
+      break;
+    default:
+      colour = "red";
+  }
+  $('<div class="confetti-'+i+' '+colour+'"></div>').css({
+    "width" : width+"px",
+    "height" : height+"px",
+    "top" : -Math.random()*20+"%",
+    "left" : Math.random()*100+"%",
+    "opacity" : Math.random()+0.5,
+    "transform" : "rotate("+Math.random()*360+"deg)"
+  }).appendTo('.wrapper');  
+  
+  drop(i);
+}
+
+function drop(x) {
+  $('.confetti-'+x).animate({
+    top: "100%",
+    left: "+="+Math.random()*15+"%"
+  }, Math.random()*3000 + 3000, function() {
+    reset(x);
+  });
+}
+
+function reset(x) {
+  $('.confetti-'+x).animate({
+    "top" : -Math.random()*20+"%",
+    "left" : "-="+Math.random()*15+"%"
+  }, 0, function() {
+    drop(x);             
+  });
+}
+  </script>
+</html>

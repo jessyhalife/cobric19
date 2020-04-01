@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+      <link rel="stylesheet" href="./assets/style.css"></link>
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body class="bg-black">
+    <a href="stage2.html" class="btn btn-dark" style="color: white; margin-top: 30px; margin-left: 30px">VOLVER</a>
+    <div class="container" style="text-align: center">
+        <h2 class="typewriter" style="color: white !important; margin: 20px;">Recuerda, el poder está dentro de ti.</h2>
+        <audio
+        controls
+        src="https://juegaencasa.exitroomescape.com/wp-content/uploads/2020/03/test-2.wav?_=1">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>
+        
+        <h1 style="margin-top: 80px">P-L-P</h1>
+       
+    </div>
+    <hr>
+    <div class="container" style="text-align: center; margin-top: 100px; margin-bottom: 50px">
+        <input type="text" id="codeZip" placeholder="codigo">
+        <button onClick="checkCode();"class="btn btn-danger">OK</button>
+    </div>
+  </body>
+  <script>
+      function checkCode(){
+          var codigo = $("#codeZip").val();
+          if (codigo == "espiritual")
+            location.href="stage4.html";
+      }
+  </script>
+</html>
